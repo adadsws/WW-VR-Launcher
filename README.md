@@ -4,6 +4,8 @@ An easy-to-use UEVR launcher and configurator specifically designed for Wutherin
 
 专为《鸣潮》设计的易用型 UEVR 启动器与配置工具，提供一键注入和优化的 VR 兼容性设置。
 
+演示视频：https://www.bilibili.com/video/BV12NX4BEE3M
+
 
 ## ✨ 核心特性 
 
