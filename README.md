@@ -32,7 +32,21 @@ An easy-to-use UEVR launcher and configurator specifically designed for Wutherin
 5.  启动《鸣潮》游戏主程序。
 6.  在启动器界面等待自动注入或点击“注入”按钮。
 
-## 🚨 当前已知问题
+##  🃏文件结构与介绍
+
+本项目主要包含以下关键文件和目录：
+
+*   **`Run_WW_VR.bat`**: 游戏 VR 模式的主启动快捷脚本，双击即可运行 Python 启动器主界面。
+*   **`requirements.txt`**: Python 运行环境的依赖列表（包含 `customtkinter` 与 `psutil` 等）。
+*   **`README.md`**: 本项目的说明文档。
+*   **`src/` (源代码目录)**:
+    *   **`ww_vr_launcher.py`**: 启动器的核心 GUI 入口程序，负责渲染现代化界面和管理注入流程。
+    *   **`config_manager.py`**: UEVR 配置文件管理器。负责读写 `%APPDATA%\UnrealVRMod\Client-Win64-Shipping` 目录下的参数并部署最佳兼容性预设。
+    *   **`injector.py`**: 核心注入逻辑脚本。负责检测《鸣潮》进程并调用 UEVR 框架进行注入。
+*   **`dlls/` (UEVR 框架组件)**: 
+    *   存放 `UEVRBackend.dll`, `openxr_loader.dll`, `openvr_api.dll` 和 `UEVRPluginNullifier.dll` 等 UEVR 的核心动态链接库，供注入器调用。
+
+## 💥当前已知问题
 
 目前在适配《鸣潮》VR 模式时，存在以下由于游戏魔改渲染管线导致的、尚未解决的视觉体验问题：
 
